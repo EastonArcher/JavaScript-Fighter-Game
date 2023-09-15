@@ -15,7 +15,7 @@ class Sprite {
         this.framesMax = framesMax
         this.framesCurrent = 0
         this.framesElapsed = 0
-        this.framesHold = 20
+        this.framesHold = 25
         this.offset = offset
     }
 
@@ -166,13 +166,20 @@ class Fighter extends Sprite {
                 this.framesCurrent = 0
             }
                 break
-            case 'run' :
-                if (this.image !== this.sprites.run.image){
-                    this.image = this.sprites.run.image
-                    this.framesMax = this.sprites.run.framesMax
+            case 'runLeft' :
+                if (this.image !== this.sprites.runLeft.image){
+                    this.image = this.sprites.runLeft.image
+                    this.framesMax = this.sprites.runLeft.framesMax
                     this.framesCurrent = 0
                 }
                 break
+            case 'runRight' :
+                    if (this.image !== this.sprites.runRight.image){
+                        this.image = this.sprites.runRight.image
+                        this.framesMax = this.sprites.runRight.framesMax
+                        this.framesCurrent = 0
+                    }
+                    break
             case 'jump' :
                 if (this.image !== this.sprites.jump.image){
                     this.image = this.sprites.jump.image

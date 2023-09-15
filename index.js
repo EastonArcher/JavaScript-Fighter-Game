@@ -4,6 +4,13 @@ const context = canvas.getContext("2d");
 canvas.width = 1024;
 canvas.height = 576;
 
+const canvasBounds = {
+    left : 0,
+    right : canvas.width,
+    top : 0,
+    bottom : canvas.height,
+};
+
 context.fillRect(0, 0, canvas.width, canvas.height);
 
 const gravity = 0.4
@@ -51,8 +58,12 @@ const player = new Fighter({
             imageSrc : './img/Huntress/Idle.png',
             framesMax : 10
         },
-        run : {
-            imageSrc : './img/Huntress/Run.png',
+        runLeft : {
+            imageSrc : './img/Huntress/RunLeft.png',
+            framesMax : 8
+        },
+        runRight : {
+            imageSrc : './img/Huntress/RunRight.png',
             framesMax : 8
         },
         jump : {
@@ -78,11 +89,11 @@ const player = new Fighter({
     },
     attackBox : {
         offset : {
-            x : 125,
+            x : 150,
             y : 100
         },
         width : 150,
-        height : 100
+        height : 50
     }
 })
 
@@ -112,8 +123,12 @@ const enemy = new Fighter({
             imageSrc : './img/Swordsman/Idle.png',
             framesMax : 6
         },
-        run : {
-            imageSrc : './img/Swordsman/Run.png',
+        runLeft : {
+            imageSrc : './img/Swordsman/RunLeft.png',
+            framesMax : 8
+        },
+        runRight : {
+            imageSrc : './img/Swordsman/RunRight.png',
             framesMax : 8
         },
         jump : {
@@ -139,11 +154,11 @@ const enemy = new Fighter({
     },
     attackBox : {
         offset : {
-            x : 20,
-            y : 100
+            x : -170,
+            y : 50
         },
-        width : 150,
-        height : 100
+        width : 170,
+        height : 50
     }
 })
 
@@ -185,11 +200,11 @@ function animate(){
     //Player Movement 
 
     if(keys.a.pressed && player.lastkey == 'a'){
-        player.velocity.x = -3
-        player.switchSprite('run')
+            player.velocity.x = -2.25
+            player.switchSprite('runLeft')
     } else if (keys.d.pressed && player.lastkey == 'd'){
-        player.velocity.x = 3
-        player.switchSprite('run')
+            player.velocity.x = 2.25
+            player.switchSprite('runRight')
     } else {
         player.switchSprite('idle')
     }
@@ -203,11 +218,11 @@ function animate(){
 
     //Enemy Movement
     if(keys.ArrowLeft.pressed && enemy.lastkey == 'ArrowLeft'){
-        enemy.velocity.x = -3
-        enemy.switchSprite('run')
+        enemy.velocity.x = -2.25
+        enemy.switchSprite('runLeft')
     } else if (keys.ArrowRight.pressed && enemy.lastkey == 'ArrowRight'){
-        enemy.velocity.x = 3
-        enemy.switchSprite('run')
+        enemy.velocity.x = 2.25
+        enemy.switchSprite('runRight')
     } else {
         enemy.switchSprite('idle')
     }
