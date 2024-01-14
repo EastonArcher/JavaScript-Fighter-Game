@@ -1,5 +1,5 @@
 ﻿# FighterGame
 
-### 2 Player fighting game developed with Javascript and HTML. Utilization of character sprites, animations, physics, and game logic
+2 Player fighting game developed with Javascript and HTML. Utilization of character sprites, animations, physics, and game logic
 
-### Web deployment done via Netlify. Available [here](https://eastonarcher-fightergame.netlify.app/)
+Web deployment done via Netlify. Available [here](https://eastonarcher-fightergame.netlify.app/)
