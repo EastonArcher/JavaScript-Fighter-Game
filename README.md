@@ -10,3 +10,12 @@ Welcome to the JavaScript Fighter Game repository! This project is a 2 Player fi
 - **Game Logic:** Strategize and master various moves and combos to defeat your opponent.
 
 ## Deployment
+
+The game is deployed on the web via Netlify and is available [here](https://your-game-url.netlify.app).
+
+## How to Play
+
+1. **Open the Game:** Visit the provided deployment link.
+2. **Select Characters:** Choose your character and challenge your opponent.
+3. **Fight:** Use keyboard controls to move your character and execute attacks.
+4. **Victory:** Defeat your opponent to claim victory!
