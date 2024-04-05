@@ -19,3 +19,4 @@ The game is deployed on the web via Netlify and is available [here](https://your
 2. **Select Characters:** Choose your character and challenge your opponent.
 3. **Fight:** Use keyboard controls to move your character and execute attacks.
 4. **Victory:** Defeat your opponent to claim victory!
+
