@@ -1,6 +1,6 @@
 # JavaScript Fighter Game
 
-Welcome to the JavaScript Fighter Game repository! This project is a 2 Player fighting game developed with Javascript and HTML. It features character sprites, animations, physics, and robust game logic to provide an engaging gaming experience.
+This project is a 2 Player fighting game developed with Javascript and HTML. It features character sprites, animations, physics, and robust game logic to provide an engaging gaming experience.
 
 ## Features
 
